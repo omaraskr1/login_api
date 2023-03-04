@@ -34,7 +34,7 @@ from apiapp.views import awsImageview,userSignupViewset
 
 router= DefaultRouter()
 # router.register('login',UserLoginViewset)
-# router.register('awsimages',awsImageview)
+router.register('awsimages',awsImageview)
 # router.register('signup',userSignupViewset)
 # router.register(r'product', ProductViewSet, basename='Product')
 # router.register(r'image', ImageViewSet, basename='Image')
@@ -51,8 +51,8 @@ urlpatterns = [
     path('register/', userSignupViewset.as_view(), name='auth_register'),
     path('login/', MyObtainTokenPairView.as_view(), name='token_obtain_pair'),
     path('login/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    # path('awsimage',awsImageview.as_view(),name='aws_image'),
+    #  path('awsimage',awsImageview.as_view(),name='aws_image'),
     # path('',include(router.urls))
-]
-# urlpatterns+=router.urls
+] 
+urlpatterns+=router.urls
 # +static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT )
