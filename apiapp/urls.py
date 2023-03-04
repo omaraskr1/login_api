@@ -16,6 +16,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('auth.urls')),
     path('', include(router.urls)),
+    path('awsimage',awsImageview.as_view(),name='aws_image'),
 ]
 
 if settings.DEBUG:

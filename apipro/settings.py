@@ -41,9 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework_simplejwt',
     'apiapp',
-    'loginform',
+    # 'loginform',
     'rest_framework.authtoken',
-    'signup_form',
+    # 'signup_form',
 ]
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
